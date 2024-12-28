@@ -28,6 +28,38 @@ import ITservice from "./pages/ITservice";
 import SecuritySurveillanceService from "./pages/securitysurveillanceservice";
 import NetworkingService from "./pages/networkingservice";
 import MobilityService from "./pages/mobilityservice";
+import Contacts from "./pages/Contact";
+
+// import Portfolio from './components/Portfolio';
+
+// //products
+import CyberSecurityproducts from './pages/CyberSecurityproducts';
+import FirewallDetails from './pages/cybersecproduct/FirewallDetails';
+import AntivirusDetails from './pages/cybersecproduct/AntivirusDetails';
+import NetworkSecurityDetails from './pages/cybersecproduct/NetworkSecurityDetails';
+
+
+import ITProducts from './pages/ITProducts';
+import PrinterDetails from './pages/ITproduct/PrinterDetails';
+import LaptopDetails from './pages/ITproduct/LaptopDetails'; // Import the Laptop Details page
+//import CameraProducts from './pages/ITproduct/PrinterDetails'; 
+
+import Mobility from './pages/MobilityProduct';
+import MobilityProductsDetails from './pages/Mobilityproducts/MobilityProductsDetails';
+import RAppDetails from './pages/Mobilityproducts/RAppDetails';
+
+// import ITProducts from './pages/ITProducts';
+// import NetworkSecurity from './pages/CameraProducts';
+//
+// import PrinterDetails from './pages/PrinterDetails';
+
+// // Add other import statements for VPN, Antivirus, etc.
+//   // Add this import
+// import LaptopDetails from './pages/LaptopDetails'; // Import the Laptop Details page
+// import CameraProducts from './pages/CameraProducts'; // Import the Camera Products page
+//  //import the netwrok security products
+// 
+// import NetworkDevicesDetails from './pages/NetworkDevicesDetails';
 
 
 
@@ -55,7 +87,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/get-demo" element={<DemoProduct />} /> 
+            <Route path="/contact-us" element={<DemoProduct />} /> 
             <Route path="/partners" element={<partners />} /> 
             <Route path="/clients" element={<Clients />} />
 
@@ -66,6 +98,43 @@ function App() {
                 <Route path="/security-surveillance-service" element={<SecuritySurveillanceService />} />
                 <Route path="/networking-service" element={<NetworkingService />} />
                 <Route path="/mobility-service" element={<MobilityService />} />
+
+                <Route path="/contact#aboutus" element={<Contacts />} />
+                <Route path="/DemoProduct" element={<DemoProduct />} />
+                
+
+
+                <Route path="/cyber-security" element={<CyberSecurityproducts />} />
+                <Route path="/firewall-details" element={<FirewallDetails />} />
+                <Route path="/antivirus-details" element={<AntivirusDetails />} />
+                <Route path="/network-security-details" element={<NetworkSecurityDetails />} />
+
+                <Route path="/it-products" element={<ITProducts />} />
+
+                <Route path="/laptops" element={<LaptopDetails />} />
+            {/* <Route path="/cameras" element={<CameraProducts />} /> */}
+            <Route path="/printers" element={<PrinterDetails />} /> 
+
+
+            <Route path="/mobility" element={<Mobility />} />
+            <Route path="/mobility-products-details" element={<MobilityProductsDetails />} />
+            <Route path="/r-app-details" element={<RAppDetails />} />
+{/* 
+                <Route path="/portfolio" element={<Portfolio />} />
+            
+            <Route path="/it-products" element={<ITProducts />} />
+            <Route path="/network-security" element={<NetworkSecurity />} />
+            
+            <Route path="/" element={<CyberSecurity />} />
+            
+             {
+            <Route path="/laptops" element={<LaptopDetails />} />
+            <Route path="/cameras" element={<CameraProducts />} />
+            
+            
+            <Route path="/network-devices-details" element={<NetworkDevicesDetails />} />
+            <Route path="/printers" element={<PrinterDetails />} /> */}
+
 
           </Routes>
         </ScrollToTop>

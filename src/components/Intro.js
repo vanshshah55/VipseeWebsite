@@ -277,6 +277,11 @@ import laptopimg from "../images/website images/laptops ai.png";
 import cloud1img from "../images/website images/cloud 2 ai.png";
 import connectivityimg from "../images/website images/connectivity ai.png";
 
+
+import { HashLink } from "react-router-hash-link";
+
+
+
 const Intro = () => {
   const settings = {
     dots: true, // Enable dots
@@ -365,8 +370,10 @@ const Intro = () => {
               Productivity for businesses and individuals.
             </p>
           </div>
-          <Link
-            to="/contact"
+
+
+          <HashLink
+            to="/contact#aboutus"
             className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-2 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 group"
           >
             Know More
@@ -382,7 +389,7 @@ const Intro = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </Link>
+          </HashLink>
         </div>
       </div>
     </div>

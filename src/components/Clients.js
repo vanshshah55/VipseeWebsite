@@ -61,6 +61,7 @@ import qsan from "../images/clients/QsanLogo.png"
 import asustor from "../images/clients/asustorlogo.png"
 import bitdefender from "../images/clients/bitdefenderlogo.png";
 import eset from "../images/clients/esetlogo.png";
+import sqrite from "../images/clients/sqritelogo-removebg-preview.png"
 
 const clientLogosRow1 = [
   uniview,
@@ -75,6 +76,7 @@ const clientLogosRow1 = [
   qsan,
   asustor,
   bitdefender,
+  sqrite,
   eset,
   uniview,
   hikvision,
@@ -88,6 +90,7 @@ const clientLogosRow1 = [
   qsan,
   asustor,
   bitdefender,
+  sqrite,
   eset,uniview,
   hikvision,
   Sonicwall,
@@ -100,6 +103,7 @@ const clientLogosRow1 = [
   qsan,
   asustor,
   bitdefender,
+  sqrite,
   eset,uniview,
   hikvision,
   Sonicwall,
@@ -112,6 +116,7 @@ const clientLogosRow1 = [
   qsan,
   asustor,
   bitdefender,
+  sqrite,
   eset,
   
 ];
