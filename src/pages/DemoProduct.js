@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import { useDocTitle } from '../components/CustomHook';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaTree, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaTree, FaWhatsapp } from 'react-icons/fa';
 import { TbBrandGoogleMaps } from 'react-icons/tb';
 import { HashLink } from 'react-router-hash-link';
 
@@ -134,13 +134,15 @@ useEffect(() => {
                                     <li>Stockroom for key inventory items.</li>
                                 </ul>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1884.8463080774425!2d72.8498738!3d19.1211362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9007a6440d9%3A0xd3181a1e202fc9e5!2sVipsee%20Infotech!5e0!3m2!1sen!2sin!4v1735135958268!5m2!1sen!2sin"
-                                    width="100%"
-                                    height="400"
-                                    style={{ border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                ></iframe>
+  title="Vipsee Infotech Location Map" // Add a descriptive title
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1884.8463080774425!2d72.8498738!3d19.1211362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9007a6440d9%3A0xd3181a1e202fc9e5!2sVipsee%20Infotech!5e0!3m2!1sen!2sin!4v1735135958268!5m2!1sen!2sin"
+  width="100%"
+  height="400"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
+
                             </div>
 
                             {/* Office 2 */}
@@ -153,7 +155,7 @@ useEffect(() => {
                                     <li>Regional hub for IT Sales and maintenance services.</li>
                                 </ul>
                                 <iframe
-                                    
+                                     title="Vipsee Infotech Location Map 2"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.0283762711174!2d72.83005447523554!3d18.93013808224467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d114760838fd%3A0x21badc1e59ef8143!2sVIPSEE%20INFOTECH!5e0!3m2!1sen!2sin!4v1735751172401!5m2!1sen!2sin"
                                     width="100%"
                                     height="400"

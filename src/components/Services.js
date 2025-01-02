@@ -1,13 +1,13 @@
 
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import img from "../images/network.svg";
 import img2 from "../images/computer-servers-cloud.svg";
-import img7 from "../images/cctv illustration.svg";
+//import img7 from "../images/cctv illustration.svg";
 import img4 from "../images/cctv illustration 2.svg";
 import img5 from "../images/data-and-settings.svg";
-import img6 from "../images/product images/camera product images/uniarchpandacamera.png";
+//import img6 from "../images/product images/camera product images/uniarchpandacamera.png";
 
 const Services = () => {
 

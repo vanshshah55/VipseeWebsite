@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-import surveillanceImg from "../images/website images/cctv camera ai.png";
+// import surveillanceImg from "../images/website images/cctv camera ai.png";
 import { Link } from 'react-router-dom';
 
 const SecuritySurveillanceService = () => {

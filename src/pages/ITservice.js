@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-import serviceImg from "../images/website images/laptops ai.png";
+// import serviceImg from "../images/website images/laptops ai.png";
 import { Link } from 'react-router-dom';
 
 

@@ -11,7 +11,7 @@ import {
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
-import partners from './components/Clients'
+//import partners from './components/Clients'
 import Clients from '../src/components/Clients'
 
 import {useDocTitle} from './components/CustomHook';

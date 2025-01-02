@@ -8,8 +8,6 @@ import Slider from "react-slick";
 import NavBar from "../components/Navbar/NavBar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import heroImg1 from "../images/web-dev.svg";
-import heroImg2 from "../images/website images/front page image.jpeg";
 import cctvimg from "../images/website images/cctv camera ai.png";
 import networkimg from "../images/website images/networking devices ai.png"
 import firewallimg from "../images/website images/firewall ai.png";

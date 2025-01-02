@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-import networkImg from "../images/website images/connectivity ai.png";
+// import networkImg from "../images/website images/connectivity ai.png";
 
 import { Link } from 'react-router-dom';
 

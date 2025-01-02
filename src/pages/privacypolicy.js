@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
      useEffect(() => {
