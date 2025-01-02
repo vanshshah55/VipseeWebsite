@@ -49,12 +49,12 @@ const PrinterDetails = () => {
                                     />
                                 </div>
                                 <p className="mt-4 text-center">{product.description}</p>
-                                <h3 className="mt-4 font-semibold">Features:</h3>
+                                {/* <h3 className="mt-4 font-semibold">Features:</h3>
                                 <ul className="list-disc ml-8 mt-2">
                                     {product.features.map((feature, i) => (
                                         <li key={i}>{feature}</li>
                                     ))}
-                                </ul>
+                                </ul> */}
                             </div>
                         ))}
                     </div>

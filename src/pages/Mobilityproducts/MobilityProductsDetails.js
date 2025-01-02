@@ -41,7 +41,7 @@ const MobilityProductsDetails = () => {
             </div>
             <div className="bg-gray-100 py-4 mt-24">
                 <div className="container mx-auto px-10">
-                    <h1 className="text-3xl font-bold text-blue-900 text-center">Data Storage Products</h1>
+                    <h1 className="text-3xl font-bold text-blue-900 text-center">Data Storage Products (NAS - network attached storage)</h1>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {mobilityProducts.map((product, index) => (
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">

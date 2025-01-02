@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import NavBar from '../../components/Navbar/NavBar';
 import Footer from '../../components/Footer';

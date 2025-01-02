@@ -20,12 +20,12 @@ const ITMaintainanceService = () => {
         "Complete networking solutions, including installations, troubleshooting, and performance optimization for seamless connectivity.",
       icon: "🌐",
     },
-    {
-      title: "CCTV Maintenance",
-      description:
-        "Regular servicing, troubleshooting, and updates for CCTV cameras to maintain 24/7 surveillance and security.",
-      icon: "📹",
-    },
+    // {
+    //   title: "CCTV Maintenance",
+    //   description:
+    //     "Regular servicing, troubleshooting, and updates for CCTV cameras to maintain 24/7 surveillance and security.",
+    //   icon: "📹",
+    // },
     {
       title: "Server Maintenance",
       description:

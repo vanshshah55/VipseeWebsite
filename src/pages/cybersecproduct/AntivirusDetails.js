@@ -11,19 +11,19 @@ const AntivirusDetails = () => {
     const antivirusProducts = [
         {
             name: 'Bitdefender',
-            description: 'Bitdefender offers comprehensive protection against all forms of malware and ransomware.',
+            description: 'Bitdefender provides advanced, comprehensive cybersecurity solutions, protecting against all forms of malware, ransomware, and online threats. With features like real-time protection and a VPN included, it ensures both security and privacy for users',
             features: ['Advanced Threat Defense', 'Anti-Phishing Protection', 'Real-time Protection', 'VPN included'],
             imageUrl: bitdefenderImage, // Correctly import and assign the image
         },
         {
             name: 'ESET',
-            description: 'ESET NOD32 provides exceptional protection against all online threats, including viruses and malware.',
+            description: 'ESET delivers cutting-edge antivirus and internet security solutions, offering robust protection against viruses, malware, and phishing attacks. Its smart scanning technology and cloud-powered scanning provide a seamless and efficient defense system.',
             features: ['Smart scanning technology', 'Real-time file system protection', 'Antiphishing', 'Cloud-powered scanning'],
             imageUrl: esetImage, // Correctly import and assign the image
         },
         {
-            name: 'Sqrite',
-            description: 'ESET NOD32 provides exceptional protection against all online threats, including viruses and malware.',
+            name: 'Seqrite',
+            description: 'Seqrite is an enterprise-grade cybersecurity solution offering reliable protection against malware, ransomware, and other threats. It includes advanced features like endpoint security, antiphishing, and real-time system protection tailored for businesses of all sizes.',
             features: ['Smart scanning technology', 'Real-time file system protection', 'Antiphishing', 'Cloud-powered scanning'],
             imageUrl: sqriteimage, // Correctly import and assign the image
         },
@@ -49,12 +49,12 @@ const AntivirusDetails = () => {
                                     />
                                 </div>
                                 <p className="mt-4 text-center">{product.description}</p>
-                                <h3 className="mt-4 font-semibold">Features:</h3>
+                                {/* <h3 className="mt-4 font-semibold">Features:</h3>
                                 <ul className="list-disc ml-8 mt-2">
                                     {product.features.map((feature, i) => (
                                         <li key={i}>{feature}</li>
                                     ))}
-                                </ul>
+                                </ul> */}
                             </div>
                         ))}
                     </div>

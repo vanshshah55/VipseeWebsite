@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const NetworkMobilityService = () => {
   const services = [
     {
-      title: "R App (Clientless Remote Connectivity)",
+      title: "RemoteEdge Connect App (Clientless Remote Connectivity)",
       description:
         "Seamless remote access solutions without the need for client installation, enabling secure and efficient connectivity for businesses on the move.",
       icon: "📡",
