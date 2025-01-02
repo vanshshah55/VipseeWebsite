@@ -46,8 +46,7 @@
 // export default Clients;
 
 
-
-import React from "react";
+import React, { useEffect } from "react";
 import Cisco from "../images/clients/Cisco_Logo-removebg-preview.png";
 import Cambium from "../images/clients/Cambium Network - Logo.png";
 import uniview from "../images/clients/univiewlogoopng-removebg-preview.png";
@@ -62,6 +61,7 @@ import asustor from "../images/clients/asustorlogo.png"
 import bitdefender from "../images/clients/bitdefenderlogo.png";
 import eset from "../images/clients/esetlogo.png";
 import sqrite from "../images/clients/sqritelogo-removebg-preview.png"
+
 
 const clientLogosRow1 = [
   uniview,
@@ -124,6 +124,8 @@ const clientLogosRow1 = [
 const exclusivePartnerLogo = uniview;
 
 const Clients = () => {
+
+
   return (
     <div id="partners"className="scroll-offset" 
     // style={{ scrollMarginTop: '64px' }}

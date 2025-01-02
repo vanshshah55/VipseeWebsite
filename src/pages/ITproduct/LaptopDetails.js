@@ -73,3 +73,5 @@ const LaptopDetails = () => {
 };
 
 export default LaptopDetails;
+
+

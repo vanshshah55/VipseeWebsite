@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 import networkImg from "../images/website images/connectivity ai.png";
+
+import { Link } from 'react-router-dom';
 
 const NetworkMobilityService = () => {
   const services = [
@@ -61,6 +63,14 @@ const NetworkMobilityService = () => {
     },
   ];
 
+  
+    useEffect(() => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth', // Enables smooth scrolling
+      });
+  }, []);
+
   return (
     <>
       <div>
@@ -75,11 +85,11 @@ const NetworkMobilityService = () => {
             At Vipsee Infotech, we provide innovative network mobility solutions that ensure
             seamless connectivity and optimized network performance for businesses.
           </p>
-          <img
+          {/* <img
             src={networkImg}
             alt="Network Mobility Services"
             className="rounded-xl mb-8 shadow-lg mx-auto max-w-full md:max-w-sm h-auto"
-          />
+          /> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
@@ -96,6 +106,14 @@ const NetworkMobilityService = () => {
               </div>
             ))}
           </div>
+           <div className="text-center mt-10">
+                                                                                    <Link
+                                                                                        to="/mobility" // Common related services page
+                                                                                        className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+                                                                                    >
+                                                                                        Explore All Related Products
+                                                                                    </Link>
+                                                                                </div>
         </div>
       </div>
       <Footer />

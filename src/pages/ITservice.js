@@ -1,7 +1,10 @@
-import React from "react";
+//import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 import serviceImg from "../images/website images/laptops ai.png";
+import { Link } from 'react-router-dom';
+
 
 const ITMaintainanceService = () => {
   const services = [
@@ -55,9 +58,17 @@ const ITMaintainanceService = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Enables smooth scrolling
+    });
+}, []);
+
+
   return (
     <>
-      <div>
+      <div >
         <NavBar />
       </div>
       <div className="bg-gray-100 py-4 mt-24">
@@ -69,11 +80,11 @@ const ITMaintainanceService = () => {
             At Vipsee Infotech, we ensure your IT infrastructure is reliable,
             secure, and always operational.
           </p>
-          <img
+          {/* <img
             src={serviceImg}
             alt="IT Maintenance Services"
             className="rounded-xl mb-8 shadow-lg mx-auto max-w-full md:max-w-sm h-auto"
-          />
+          /> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
@@ -90,6 +101,14 @@ const ITMaintainanceService = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+                                                                          <Link
+                                                                              to="/it-products" // Common related services page
+                                                                              className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+                                                                          >
+                                                                              Explore All Related Products
+                                                                          </Link>
+                                                                      </div>
         </div>
       </div>
       <Footer />

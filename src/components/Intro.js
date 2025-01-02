@@ -270,12 +270,14 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cctvimg from "../images/website images/cctv camera ai.png";
-import networkimg from "../images/website images/networking devices ai.png";
-import firewallimg from "../images/website images/firewall ai.png";
-import laptopimg from "../images/website images/laptops ai.png";
-import cloud1img from "../images/website images/cloud 2 ai.png";
-import connectivityimg from "../images/website images/connectivity ai.png";
+import sonicwallSDWANimg from "../images/website images/sonicwall secure SDWAN.webp";
+import UNVdomeimg from "../images/website images/UNVdomeimg.png";
+import unvnvrimg from "../images/website images/unvnvrimg.png";
+import unvptzimg from "../images/website images/unvptzimg.png";
+import VideoconfA30 from "../images/product images/camera product images/VideoconfA30.png";
+import unvptzimg2 from "../images/website images/unvptzimg2.png";
+import asustornasimg from "../images/website images/asustornasimage.webp";
+import uniarchindoorcamera from "../images/product images/camera product images/uniarch indoor camera.png";
 
 
 import { HashLink } from "react-router-hash-link";
@@ -324,7 +326,7 @@ const Intro = () => {
         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
           <div className="carousel-container w-full border-1 border-blue-900 rounded-xl p-2 max-w-sm">
             <Slider {...settings}>
-              {[cctvimg, networkimg, firewallimg, laptopimg, cloud1img, connectivityimg].map(
+              {[sonicwallSDWANimg,UNVdomeimg,uniarchindoorcamera,unvnvrimg,unvptzimg2, asustornasimg,unvptzimg,VideoconfA30].map(
                 (img, index) => (
                   <div key={index}>
                     <img

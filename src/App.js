@@ -30,7 +30,7 @@ import NetworkingService from "./pages/networkingservice";
 import MobilityService from "./pages/mobilityservice";
 import Contacts from "./pages/Contact";
 
-// import Portfolio from './components/Portfolio';
+import Portfolio from './components/Portfolio';
 
 // //products
 import CyberSecurityproducts from './pages/CyberSecurityproducts';
@@ -42,25 +42,19 @@ import NetworkSecurityDetails from './pages/cybersecproduct/NetworkSecurityDetai
 import ITProducts from './pages/ITProducts';
 import PrinterDetails from './pages/ITproduct/PrinterDetails';
 import LaptopDetails from './pages/ITproduct/LaptopDetails'; // Import the Laptop Details page
-//import CameraProducts from './pages/ITproduct/PrinterDetails'; 
 
 import Mobility from './pages/MobilityProduct';
 import MobilityProductsDetails from './pages/Mobilityproducts/MobilityProductsDetails';
 import RAppDetails from './pages/Mobilityproducts/RAppDetails';
 
-// import ITProducts from './pages/ITProducts';
-// import NetworkSecurity from './pages/CameraProducts';
-//
-// import PrinterDetails from './pages/PrinterDetails';
+import CameraProducts from './pages/CameraProducts';
+import UniarchCameraProduct from './pages/Securitysurveillanceproduct/Uniarchproductdetails';
+import UnvCameraProduct from './pages/Securitysurveillanceproduct/Unvproductdetails';
+import NVRproduct from './pages/Securitysurveillanceproduct/NVRproductdetails';
+import VCproduct from './pages/Securitysurveillanceproduct/videoconferrencingproductdetails';
 
-// // Add other import statements for VPN, Antivirus, etc.
-//   // Add this import
-// import LaptopDetails from './pages/LaptopDetails'; // Import the Laptop Details page
-// import CameraProducts from './pages/CameraProducts'; // Import the Camera Products page
-//  //import the netwrok security products
-// 
-// import NetworkDevicesDetails from './pages/NetworkDevicesDetails';
 
+import Privacypolicy from './pages/privacypolicy';
 
 
 function App() {
@@ -90,6 +84,7 @@ function App() {
             <Route path="/contact-us" element={<DemoProduct />} /> 
             <Route path="/partners" element={<partners />} /> 
             <Route path="/clients" element={<Clients />} />
+            <Route path="/portfolio" element={<Portfolio />} />
 
 
             <Route path="/" element={<Services />} />
@@ -112,15 +107,25 @@ function App() {
                 <Route path="/it-products" element={<ITProducts />} />
 
                 <Route path="/laptops" element={<LaptopDetails />} />
-            {/* <Route path="/cameras" element={<CameraProducts />} /> */}
+            
             <Route path="/printers" element={<PrinterDetails />} /> 
 
 
             <Route path="/mobility" element={<Mobility />} />
             <Route path="/mobility-products-details" element={<MobilityProductsDetails />} />
             <Route path="/r-app-details" element={<RAppDetails />} />
+
+            <Route path="/cameras" element={<CameraProducts />} />
+            <Route path="/Uniarch-product-details" element={<UniarchCameraProduct />} />
+            <Route path="/Unv-product-details" element={<UnvCameraProduct />} />
+            <Route path="/NVR-product-details" element={<NVRproduct />} />
+            <Route path="/Video-Conferrencing-products-details" element={<VCproduct />} />
+
+            <Route path="/Privacy-Policy" element={<Privacypolicy/>}/>
+
+
 {/* 
-                <Route path="/portfolio" element={<Portfolio />} />
+                
             
             <Route path="/it-products" element={<ITProducts />} />
             <Route path="/network-security" element={<NetworkSecurity />} />
@@ -129,7 +134,7 @@ function App() {
             
              {
             <Route path="/laptops" element={<LaptopDetails />} />
-            <Route path="/cameras" element={<CameraProducts />} />
+            
             
             
             <Route path="/network-devices-details" element={<NetworkDevicesDetails />} />
