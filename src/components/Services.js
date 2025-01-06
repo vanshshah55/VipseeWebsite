@@ -39,7 +39,7 @@ const Services = () => {
         {
             title: "Network Mobility Services",
             description:
-                "Empower your team with flexible and efficient network mobility solutions, ensuring seamless connectivity and productivity on the go with enterprise WIFI solutions and RAPPs for clientless remote connectivity.",
+                "Empower your team with flexible and efficient network mobility solutions, ensuring seamless connectivity and productivity on the go with enterprise WIFI solutions and RemoteEdge Connect App for clientless remote connectivity.",
             link: "/mobility-service",
             imgSrc: img2,
             alt: "Mobility service",

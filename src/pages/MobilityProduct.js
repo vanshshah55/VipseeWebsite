@@ -8,12 +8,12 @@ const MobilityProducts = () => {
     const products = [
         {
             name: 'Data Storage Products',
-            description: 'Explore advanced mobility solutions to empower your business and improve connectivity.',
+            description: 'Secure and scalable NAS solutions designed to meet the data storage, backup, and collaboration needs of homes and businesses.',
             link: '/mobility-products-details', // Link to detailed mobility products page
         },
         {
             name: 'RemoteEdge Connect App',
-            description: 'Discover R-App for enhanced mobility management and seamless app integration.',
+            description: 'RemoteEdge Connect App provides secure and seamless remote access to your network, enabling businesses to maintain connectivity and productivity from anywhere.',
             link: '/r-app-details', // Link to R-App details page
         },
         

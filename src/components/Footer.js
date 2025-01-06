@@ -86,7 +86,7 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/company/vipsee-infotech" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin size={24} className="text-blue-700 hover:text-blue-900" />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/vipseeinfotech" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram size={24} className="text-pink-500 hover:text-pink-700" />
                             </a>
                             <HashLink smooth to="/DemoProduct#locations">

@@ -12,7 +12,7 @@ const NetworkSecurityDetails = () => {
     const networkSecurityProducts = [
         {
             name: 'Cambium Networks',
-            description: 'Cambium Networks provides scalable and secure Wi-Fi and broadband solutions for business and enterprise needs.',
+            description: 'Cambium Networks delivers scalable and secure Wi-Fi and broadband solutions, offering high-performance connectivity for both indoor and outdoor environments.',
             features: [
                 'High-Performance Wireless',
                 'Cloud-Managed Wi-Fi',
@@ -28,20 +28,20 @@ const NetworkSecurityDetails = () => {
         },
         {
             name: 'Ruijie Network ',
-            description: 'Ruijie offers reliable and cost-effective network security solutions for business and enterprise environments.',
+            description: 'Ruijie provides advanced indoor networking solutions tailored for high-speed, secure, and efficient connectivity in enterprise environments.',
             features: ['Advanced intrusion prevention', 'Network monitoring', 'Web filtering', 'Multi-layer security'],
             imageUrl: ruijieImage,
         },
         
         {
             name: 'Netgear',
-            description: 'Netgear provides reliable and robust firewall solutions for small to medium-sized businesses.',
+            description: 'Netgear provides reliable and robust Wi-Fi solutions and network switches for seamless connectivity in small to medium-sized businesses.',
             features: ['Advanced network monitoring', 'Secure VPN connections', 'Web filtering', 'Multi-gig support'],
             imageUrl: netgearImage,
         },
         {
             name: 'TP-Link ',
-            description: 'TP-Link delivers affordable and efficient firewall solutions for homes and small businesses.',
+            description: 'TP-Link offers affordable and efficient Wi-Fi and network switch solutions, designed for both home and small business environments.',
             features: ['Dual-band connectivity', 'Parental controls', 'Integrated malware protection', 'Cloud management'],
             imageUrl: tplinkImage,
         },
@@ -54,7 +54,7 @@ const NetworkSecurityDetails = () => {
             </div>
             <div className="bg-gray-100 py-4 mt-24">
                 <div className="container mx-auto px-10">
-                    <h1 className="text-3xl font-bold text-blue-900 text-center">Network Security Solutions</h1>
+                    <h1 className="text-3xl font-bold text-blue-900 text-center">Networking Products</h1>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {networkSecurityProducts.map((product, index) => (
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">

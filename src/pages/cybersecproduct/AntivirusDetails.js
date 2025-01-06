@@ -11,7 +11,7 @@ const AntivirusDetails = () => {
     const antivirusProducts = [
         {
             name: 'Bitdefender',
-            description: 'Bitdefender provides advanced, comprehensive cybersecurity solutions, protecting against all forms of malware, ransomware, and online threats. With features like real-time protection and a VPN included, it ensures both security and privacy for users',
+            description: 'Bitdefender GravityZone delivers advanced antivirus solutions with next-generation threat protection and centralized security management for businesses of all sizes.',
             features: ['Advanced Threat Defense', 'Anti-Phishing Protection', 'Real-time Protection', 'VPN included'],
             imageUrl: bitdefenderImage, // Correctly import and assign the image
         },

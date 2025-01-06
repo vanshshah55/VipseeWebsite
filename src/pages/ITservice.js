@@ -45,7 +45,7 @@ const ITMaintainanceService = () => {
       icon: "🔒",
     },
     {
-      title: "Firewall & Security Solutions",
+      title: "Firewall & Security Support",
       description:
         "Installation and maintenance of firewalls and security systems to protect your network from cyber threats.",
       icon: "🔥",
