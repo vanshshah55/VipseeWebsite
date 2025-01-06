@@ -108,7 +108,7 @@ const Information = () => {
                 <p className="text-gray-700 mt-2">
                   Whether you're looking to enhance your security, upgrade your network, or source reliable computer systems, our team is ready to help.
                 </p>
-                <a href="/DemoProduct#contact-us" className="contact-button mt-4 inline-block px-6 py-2 bg-blue-900 text-white rounded shadow hover:bg-blue-700">
+                <a href="/DemoProduct" className="contact-button mt-4 inline-block px-6 py-2 bg-blue-900 text-white rounded shadow hover:bg-blue-700">
                   Contact Us
                 </a>
               </div>

@@ -46,7 +46,7 @@ const NavLinks = () => {
             <HashLink
                 className="px-5 py-2 bg-blue-900 text-white rounded-md shadow-md hover:bg-green-500 hover:shadow-lg transition-all duration-300 ease-in-out font-semibold"
                 smooth
-                to="/DemoProduct#contact-us"
+                to="/DemoProduct"
             >
                 Contact Us
             </HashLink>
