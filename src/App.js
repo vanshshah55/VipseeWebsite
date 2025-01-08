@@ -9,8 +9,8 @@ import {
 } from 'react-router-dom';
 // All pages
 import Home from './pages/Home';
-import Contact from './pages/Contact';
-import DemoProduct from './pages/DemoProduct';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 //import partners from './components/Clients'
 import Clients from '../src/components/Clients'
 
@@ -28,9 +28,9 @@ import ITservice from "./pages/ITservice";
 import SecuritySurveillanceService from "./pages/securitysurveillanceservice";
 import NetworkingService from "./pages/networkingservice";
 import MobilityService from "./pages/mobilityservice";
-import Contacts from "./pages/Contact";
+// import AboutUs from "./pages/AboutUs";
 
-import Portfolio from './components/Portfolio';
+import Product from './components/Products';
 
 // //products
 import CyberSecurityproducts from './pages/CyberSecurityproducts';
@@ -80,11 +80,11 @@ function App() {
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/contact-us" element={<DemoProduct />} /> 
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} /> 
             <Route path="/partners" element={<partners />} /> 
             <Route path="/clients" element={<Clients />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/products" element={<Product />} />
 
 
             <Route path="/" element={<Services />} />
@@ -94,8 +94,8 @@ function App() {
                 <Route path="/networking-service" element={<NetworkingService />} />
                 <Route path="/mobility-service" element={<MobilityService />} />
 
-                <Route path="/contact#aboutus" element={<Contacts />} />
-                <Route path="/DemoProduct" element={<DemoProduct />} />
+                <Route path="/about-us#aboutus" element={<AboutUs />} />
+                <Route path="/contact-us" element={<ContactUs />} />
                 
 
 

@@ -1,3 +1,27 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /cgi-bin/
+Disallow: /server/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /search?q=
+Disallow: /404.html
+
+# Allow search engines to access important directories:
+Allow: /public/
+Allow: /static/
+Allow: /images/
+
+# Sitemap link (ensure this file exists at the mentioned location):
+Sitemap: https://www.vipinfo.co.in/sitemap.xml
+
+# Allow search engine crawlers to index your main pages:
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

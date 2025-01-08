@@ -1,13 +1,10 @@
-//import React from "react";
-import React, { useEffect } from "react";
+import React, { useEffect,useMemo } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-// import serviceImg from "../images/website images/laptops ai.png";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const ITMaintainanceService = () => {
-  const services = [
+  const services =useMemo(() => [
     {
       title: "Hardware Maintenance",
       description:
@@ -20,12 +17,6 @@ const ITMaintainanceService = () => {
         "Complete networking solutions, including installations, troubleshooting, and performance optimization for seamless connectivity.",
       icon: "🌐",
     },
-    // {
-    //   title: "CCTV Maintenance",
-    //   description:
-    //     "Regular servicing, troubleshooting, and updates for CCTV cameras to maintain 24/7 surveillance and security.",
-    //   icon: "📹",
-    // },
     {
       title: "Server Maintenance",
       description:
@@ -56,19 +47,89 @@ const ITMaintainanceService = () => {
         "Quick and efficient support services, available both on-site and remotely, tailored to your business needs.",
       icon: "📞",
     },
-  ];
+  ],[]);
 
   useEffect(() => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth', // Enables smooth scrolling
-    });
-}, []);
+    // Set page title
+    document.title = "IT Maintenance Services | Vipsee Infotech";
 
+    // Dynamically update meta tags
+    const metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    metaDescription.content =
+      "Vipsee Infotech provides comprehensive IT maintenance services including hardware maintenance, network setup, server management,laptops and more.";
+    document.head.appendChild(metaDescription);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "IT maintenance, hardware maintenance, network setup, server maintenance, software installation, data backup, firewall support,laptops,laptop repairing";
+    document.head.appendChild(metaKeywords);
+
+    const metaAuthor = document.createElement("meta");
+    metaAuthor.name = "author";
+    metaAuthor.content = "Vipsee Infotech";
+    document.head.appendChild(metaAuthor);
+
+    // Clean up meta tags on component unmount
+    return () => {
+      document.head.removeChild(metaDescription);
+      document.head.removeChild(metaKeywords);
+      document.head.removeChild(metaAuthor);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Dynamically add structured data for SEO
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vipsee Infotech",
+      "url": "https://vipinfo.co.in",
+      "description":
+        "Vipsee Infotech provides comprehensive IT maintenance services, ensuring your IT infrastructure is reliable, secure, and operational.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fort",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400001",
+        "addressCountry": "India",
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9321139367",
+        "contactType": "customer service",
+      },
+      "service": services.map((service) => ({
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    // Clean up structured data on component unmount
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [services]);
+
+  useEffect(() => {
+    // Ensure smooth scrolling to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <>
-      <div >
+      <div>
         <NavBar />
       </div>
       <div className="bg-gray-100 py-4 mt-24">
@@ -80,11 +141,6 @@ const ITMaintainanceService = () => {
             At Vipsee Infotech, we ensure your IT infrastructure is reliable,
             secure, and always operational.
           </p>
-          {/* <img
-            src={serviceImg}
-            alt="IT Maintenance Services"
-            className="rounded-xl mb-8 shadow-lg mx-auto max-w-full md:max-w-sm h-auto"
-          /> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
@@ -102,13 +158,13 @@ const ITMaintainanceService = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-                                                                          <Link
-                                                                              to="/it-products" // Common related services page
-                                                                              className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
-                                                                          >
-                                                                              Explore All Related Products
-                                                                          </Link>
-                                                                      </div>
+            <Link
+              to="/it-products"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+            >
+              Explore All Related Products
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />

@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-// import networkImg from "../images/website images/connectivity ai.png";
-
 import { Link } from 'react-router-dom';
 
 const NetworkMobilityService = () => {
-  const services = [
+  const services = useMemo(() => [
     {
       title: "RemoteEdge Connect App (Clientless Remote Connectivity)",
       description:
@@ -61,15 +59,69 @@ const NetworkMobilityService = () => {
         "Tailored network setups for businesses of all sizes, ensuring efficient and scalable operations.",
       icon: "⚙️",
     },
-  ];
+  ], []);  // Empty dependency array ensures that 'services' is memoized once and does not change unless necessary.
 
-  
-    useEffect(() => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth', // Enables smooth scrolling
-      });
-  }, []);
+  useEffect(() => {
+    // Scroll to top on render
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Enables smooth scrolling
+    });
+
+    // Add SEO metadata dynamically
+    const metaTitle = "Network Mobility Services | Vipsee Infotech";
+    const metaDescription = "Vipsee Infotech provides cutting-edge network mobility solutions including hybrid cloud setups, enterprise Wi-Fi, VPNs, and custom network designs, remote clientless connectivity. Secure and scalable solutions for businesses of all sizes.";
+
+    document.title = metaTitle;
+    const metaTagDescription = document.createElement("meta");
+    metaTagDescription.name = "description";
+    metaTagDescription.content = metaDescription;
+    document.head.appendChild(metaTagDescription);
+
+    const metaTagKeywords = document.createElement("meta");
+    metaTagKeywords.name = "keywords";
+    metaTagKeywords.content = "Network Mobility Services, RemoteEdge Connect, Hybrid Cloud Solutions, Enterprise Wi-Fi, VPN, IoT Connectivity, LAN/WAN Optimization, Network Security, Vipsee Infotech";
+    document.head.appendChild(metaTagKeywords);
+
+    const metaTagAuthor = document.createElement("meta");
+    metaTagAuthor.name = "author";
+    metaTagAuthor.content = "Vipsee Infotech";
+    document.head.appendChild(metaTagAuthor);
+
+    // Add structured data for SEO
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Advanced Network Mobility Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vipsee Infotech",
+        "url": "https://www.vipinfo.co.in",
+      },
+      "serviceType": "Network Mobility",
+      "areaServed": "India",
+      "description": metaDescription,
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Network Mobility Solutions",
+        "itemListElement": services.map((service) => ({
+          "@type": "Offer",
+          "name": service.title,
+          "description": service.description,
+        })),
+      },
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(metaTagDescription);
+      document.head.removeChild(metaTagKeywords);
+      document.head.removeChild(metaTagAuthor);
+      document.head.removeChild(script);
+    };
+  }, [services]);  // Now 'services' is memoized, and you can safely include it in the dependency array
 
   return (
     <>
@@ -106,14 +158,14 @@ const NetworkMobilityService = () => {
               </div>
             ))}
           </div>
-           <div className="text-center mt-10">
-                                                                                    <Link
-                                                                                        to="/mobility" // Common related services page
-                                                                                        className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
-                                                                                    >
-                                                                                        Explore All Related Products
-                                                                                    </Link>
-                                                                                </div>
+          <div className="text-center mt-10">
+            <Link
+              to="/mobility" // Common related services page
+              className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+            >
+              Explore All Related Products
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
