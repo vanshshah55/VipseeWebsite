@@ -96,7 +96,7 @@ const CameraProducts = () => {
         className="inline-block px-6 py-3 bg-green-500 text-white font-bold text-lg rounded-full shadow-md hover:bg-green-600 transition duration-300"
         aria-label="View our Product Catalogue"
       >
-        View Our WhatsApp Catalogue
+        View Our Product Catalogue
       </a>
     </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
