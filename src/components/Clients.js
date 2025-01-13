@@ -1,23 +1,29 @@
 
-//import React, { useEffect } from "react";
+
+
+
+import React, { useEffect, useMemo } from "react";
 import Cisco from "../images/clients/Cisco_Logo-removebg-preview.png";
 import Cambium from "../images/clients/Cambium Network - Logo.png";
 import uniview from "../images/clients/univiewlogoopng-removebg-preview.png";
 import hikvision from "../images/clients/hikvisionlogoo-removebg-preview.png";
 import Ruijie from "../images/clients/ruijiereyee-removebg-preview.png";
 import Sonicwall from "../images/clients/Sonicwall_Logo-removebg-preview.png";
-import netgear from "../images/clients/Netgear_Logo-removebg-preview.png"
+import netgear from "../images/clients/Netgear_Logo-removebg-preview.png";
 import Tplink from "../images/clients/Tplink Logo.png";
 import sophos from "../images/clients/sophoslogo.png";
-import qsan from "../images/clients/QsanLogo.png"
-import asustor from "../images/clients/asustorlogo.png"
+import qsan from "../images/clients/QsanLogo.png";
+import asustor from "../images/clients/asustorlogo.png";
 import bitdefender from "../images/clients/bitdefenderlogo.png";
 import eset from "../images/clients/esetlogo.png";
-import sqrite from "../images/clients/sqritelogo-removebg-preview.png"
+import sqrite from "../images/clients/sqritelogo-removebg-preview.png";
 
+const exclusivePartnerLogo = uniview;
 
-const clientLogosRow1 = [
-  uniview,
+const Clients = () => {
+  // Optimize client logos initialization
+  const clientLogosRow1 = useMemo(() => [
+    uniview,
   hikvision,
   Sonicwall,
   sophos,
@@ -72,68 +78,121 @@ const clientLogosRow1 = [
   sqrite,
   eset,
   
-];
+  ], []);
 
-const exclusivePartnerLogo = uniview;
+  // Update SEO metadata and structured data
+  useEffect(() => {
+    // Update the page title
+    document.title = "Our Trusted Partners - Networking and Surveillance Solutions";
 
-const Clients = () => {
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Explore our trusted partners in Data,networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more."
+      );
+    } else {
+      const newMetaDescription = document.createElement("meta");
+      newMetaDescription.name = "description";
+      newMetaDescription.content =
+      "Explore our trusted partners in Data,networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more.";
+      document.head.appendChild(newMetaDescription);
+    }
 
+    // Add meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute(
+        "content",
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall,sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset"
+      );
+    } else {
+      const newMetaKeywords = document.createElement("meta");
+      newMetaKeywords.name = "keywords";
+      newMetaKeywords.content =
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall,sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset";
+      document.head.appendChild(newMetaKeywords);
+    }
+
+    // Add structured data
+    const structuredData = document.createElement("script");
+    structuredData.type = "application/ld+json";
+    structuredData.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Our Trusted Partners",
+      "description":
+        "Trusted partners providing networking and surveillance solutions.",
+      "url": window.location.href,
+      "logo": exclusivePartnerLogo,
+      "sameAs": [
+        "https://www.sonicwall.com/",
+        "https://www.hikvision.com/",
+        "https://www.uniview.com/",
+      ],
+      "foundingDate": "2002",
+    });
+    document.head.appendChild(structuredData);
+
+    // Clean up on component unmount
+    return () => {
+      document.head.removeChild(structuredData);
+    };
+  }, []);
 
   return (
-    <div id="partners"className="scroll-offset" 
-    // style={{ scrollMarginTop: '64px' }}
-    >
-    <div  className="mt-8 bg-gray-100">
-      <section data-aos="fade-up">
-        <div  className="my-4 py-4">
-          <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
-            Our Partners
-          </h2>
-          <div className="flex justify-center">
-            <div className="w-24 border-b-4 border-blue-900"></div>
+    <div id="partners" className="scroll-offset">
+      <div className="mt-8 bg-white">
+        <section data-aos="fade-up">
+          <div className="my-4 py-4">
+            <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
+            Our Affiliates
+            </h2>
+            <div className="flex justify-center">
+              <div className="w-24 border-b-4 border-blue-900"></div>
+            </div>
           </div>
-        </div>
 
-        {/* Our Partners Scrolling Section */}
-        <div
-          className="p-8 overflow-hidden relative group touch-scroll"
-          data-aos="fade-in"
-          data-aos-delay="600"
-        >
-          <div className="flex gap-8 animate-scroll group-hover:animate-pause">
-            {clientLogosRow1.map((logo, index) => (
-              <div
-                key={`row1-${index}`}
-                className="flex-shrink-0 h-20 flex justify-center items-center rounded-md "
-                style={{ width: "auto", maxWidth: "150px" }} // Prevent stretching and set max width for logos
-              >
-                <img
-                  src={logo}
-                  alt={`client-${index}`}
-                  className="h-full w-auto mx-auto"
-                  style={{ objectFit: "contain" }} // Ensure the image fits within the container
-                />
-              </div>
-            ))}
+          {/* Our Partners Scrolling Section */}
+          <div
+            className="p-8 overflow-hidden relative group touch-scroll"
+            data-aos="fade-in"
+            data-aos-delay="600"
+          >
+            <div className="flex gap-8 animate-scroll group-hover:animate-pause">
+              {clientLogosRow1.map((logo, index) => (
+                <div
+                  key={`row1-${index}`}
+                  className="flex-shrink-0 h-20 flex justify-center items-center rounded-md"
+                  style={{ width: "auto", maxWidth: "150px" }}
+                >
+                  <img
+                    src={logo}
+                    alt={`client-logo-${index}`}
+                    className="h-full w-auto mx-auto"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Exclusive Partner Section (Static) */}
-        <div className="flex flex-col items-center justify-center my-8">
-          <div className="h-32 w-56 flex justify-center items-center bg-white rounded-md shadow-md border-2 border-blue-900">
-            <img
-              src={exclusivePartnerLogo}
-              alt="exclusive-partner"
-              className="h-full w-auto mx-auto"
-            />
+          {/* Exclusive Partner Section */}
+          <div className="flex flex-col items-center justify-center my-8">
+            <div className="h-32 w-56 flex justify-center items-center bg-white rounded-md shadow-md border-2 border-blue-900">
+              <img
+                src={exclusivePartnerLogo}
+                alt="exclusive-partner"
+                className="h-full w-auto mx-auto"
+              />
+            </div>
+            <span className="mt-4 text-blue-900 text-lg font-semibold">
+              Authorised Partner
+            </span>
           </div>
-          <span className="mt-4 text-blue-900 text-lg font-semibold">
-            Exclusive Authorised Partner
-          </span>
-        </div>
-      </section>
-
-      <style jsx>{`
+        </section>
+        <style jsx>{`
         .animate-scroll {
           animation: scroll-sideways 45s linear infinite;
         }
@@ -181,5 +240,3 @@ const Clients = () => {
 };
 
 export default Clients;
-
-

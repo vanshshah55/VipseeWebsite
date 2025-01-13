@@ -1,24 +1,64 @@
-
-
-
-
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import NavBar from "../components/Navbar/NavBar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import cctvimg from "../images/website images/cctv camera ai.png";
-import networkimg from "../images/website images/networking devices ai.png"
+import networkimg from "../images/website images/networking devices ai.png";
 import firewallimg from "../images/website images/firewall ai.png";
 import laptopimg from "../images/website images/laptops ai.png";
 import cloud1img from "../images/website images/cloud 2 ai.png";
-import connectivityimg from "../images/website images/connectivity ai.png"
-
-
+import connectivityimg from "../images/website images/connectivity ai.png";
 
 const Hero = () => {
   const sliderRef = useRef(null);
+
+  // Wrap products array in useMemo for optimization
+  const products = useMemo(
+    () => [
+      { img: cctvimg, alt: "CCTV Camera Solutions" },
+      { img: networkimg, alt: "Networking Devices" },
+      { img: firewallimg, alt: "Firewall Security" },
+      { img: laptopimg, alt: "Laptops and Computers" },
+      { img: cloud1img, alt: "Cloud Solutions" },
+      { img: connectivityimg, alt: "Connectivity Solutions" },
+    ],
+    []
+  );
+
+  // Update meta tags dynamically for SEO
+  useEffect(() => {
+    document.title = "Vipsee Infotech | Networking and Surveillance Solutions";
+    const metaDescription = document.querySelector("meta[name='description']");
+    const metaKeywords = document.querySelector("meta[name='keywords']");
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Vipsee Infotech offers cutting-edge networking, surveillance solutions, CCTV cameras, laptops, and cloud solutions. Serving excellence since 2002."
+      );
+    } else {
+      const descriptionTag = document.createElement("meta");
+      descriptionTag.name = "description";
+      descriptionTag.content =
+        "Vipsee Infotech offers cutting-edge networking, surveillance solutions, CCTV cameras, laptops, and cloud solutions. Serving excellence since 2002.";
+      document.head.appendChild(descriptionTag);
+    }
+
+    if (metaKeywords) {
+      metaKeywords.setAttribute(
+        "content",
+        "networking, surveillance, CCTV cameras, cloud solutions, laptops, Vipsee Infotech, security solutions, firewall, connectivity, Mumbai"
+      );
+    } else {
+      const keywordsTag = document.createElement("meta");
+      keywordsTag.name = "keywords";
+      keywordsTag.content =
+        "networking, surveillance, CCTV cameras, cloud solutions, laptops, Vipsee Infotech, security solutions, firewall, connectivity, Mumbai";
+      document.head.appendChild(keywordsTag);
+    }
+  }, []);
 
   const settings = {
     dots: true,
@@ -56,15 +96,27 @@ const Hero = () => {
     <>
       <div className="main" id="main">
         <NavBar />
-        <div className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
-          <div id="hero" className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
+        <div
+          className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6"
+          data-aos="zoom-in"
+        >
+          <div
+            id="hero"
+            className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left"
+          >
             {/* Text Content */}
-            <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              className="lg:w-1/2 flex flex-col justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
-                Redefining Network Excellence and Transforming Surveillance Solutions.
+                Redefining Network Excellence and Transforming Surveillance
+                Solutions.
               </h1>
               <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-                Driven by expertise, we craft innovative networking and surveillance solutions for a smarter future.
+                Driven by expertise, we craft innovative networking and
+                surveillance solutions for a smarter future.
               </div>
               <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                 <Link
@@ -95,13 +147,12 @@ const Hero = () => {
               data-aos-delay="700"
             >
               <div className="carousel-container w-full border-1 border-blue-900 rounded-xl p-2 max-w-sm">
-               {/* style={{ transform: 'translateX(-5px)' }}> */}
                 <Slider ref={sliderRef} {...settings}>
-                  {[cctvimg,networkimg,firewallimg,laptopimg,cloud1img,connectivityimg].map((img, index) => (
+                  {products.map((product, index) => (
                     <div key={index}>
                       <img
-                        src={img}
-                        alt={`Slide ${index + 1}`}
+                        src={product.img}
+                        alt={product.alt}
                         className="carousel-image rounded-xl w-full h-[200px] object-cover"
                       />
                     </div>

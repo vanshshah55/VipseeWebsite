@@ -1,29 +1,91 @@
-
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
-// import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
-     useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', // Enables smooth scrolling
-        });
-    }, []);
-    
+  useEffect(() => {
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    // Dynamic SEO metadata
+    document.title = "Privacy Policy | Vipsee Infotech";
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Learn how Vipsee Infotech collects, uses, and protects your personal data. Our Privacy Policy outlines our commitment to safeguarding your information."
+      );
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Vipsee Infotech, Privacy Policy, Data Protection, Cookies, Personal Information, Mumbai"
+      );
+    document
+      .querySelector("meta[name='author']")
+      ?.setAttribute("content", "Vipsee Infotech");
+
+    // Structured Data for SEO
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vipsee Infotech",
+      "url": "https://www.vipinfo.co.in", // Replace with the actual website URL
+      "logo": "https://vipinfo.co.in/static/media/vipsee_logo_from_card-removebg-preview.d96d68495b59fa97095f.png", // Replace with actual logo URL
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9321139367",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi","Gujarati","Marathi"],
+        },
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Fort Churchgate",
+          "addressLocality": "Mumbai",
+          "addressCountry": "India",
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Andheri",
+          "addressLocality": "Mumbai",
+          "addressCountry": "India",
+        },
+      ],
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup metadata changes
+      document.title = "Vipsee Infotech";
+      document.querySelector("meta[name='description']")?.setAttribute("content", "");
+      document.querySelector("meta[name='keywords']")?.setAttribute("content", "");
+      document.querySelector("meta[name='author']")?.setAttribute("content", "");
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <><div>
-    <NavBar />
-  </div>
-    <div className="bg-gray-50 py-4 mt-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-4xl font-bold text-blue-900 mb-6 text-center">Privacy Policy</h1>
-
-        <p className="text-gray-700 mb-4">
-          At <span className="font-semibold">Vipsee Infotech</span>, we prioritize your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, and protect the information you provide when interacting with our website and services.
-        </p>
-
+    <>
+      <div>
+        <NavBar />
+      </div>
+      <div className="bg-gray-50 py-4 mt-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+          <h1 className="text-4xl font-bold text-blue-900 mb-6 text-center">Privacy Policy</h1>
+          <p className="text-gray-700 mb-4">
+            At <span className="font-semibold">Vipsee Infotech</span>, we prioritize your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, and protect the information you provide when interacting with our website and services.
+          </p>
         <h2 className="text-2xl font-semibold text-blue-900 mb-4">Information We Collect</h2>
         <p className="text-gray-700 mb-4">
           When you visit our website or use our services, we may collect the following information:

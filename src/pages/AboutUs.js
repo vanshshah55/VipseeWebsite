@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
@@ -8,14 +7,78 @@ import "./AboutUs.css"; // Link to your CSS file for styling
 const Information = () => {
   useDocTitle("About Us | Vipsee Infotech");
 
-
   useEffect(() => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth', // Enables smooth scrolling
-      });
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Enables smooth scrolling
+    });
+
+    // Dynamically update meta tags
+    document.title = "About Us | Vipsee Infotech";
+    const metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    metaDescription.content =
+      "Learn about Vipsee Infotech, a trusted name in Cybersecurity, IT, Networking, and Security Surveillance solutions with over 20 years of experience. Explore our mission, services, and values.";
+    document.head.appendChild(metaDescription);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "Vipsee Infotech, Networking Solutions, CCTV  camera Surveillance, IT Services, Mumbai, Vipul Shah, Surveillance Technology, Firewalls,vipinfo,cybersecurity,data, Fort, Churchgate";
+    document.head.appendChild(metaKeywords);
+
+    const metaAuthor = document.createElement("meta");
+    metaAuthor.name = "author";
+    metaAuthor.content = "Vipsee Infotech";
+    document.head.appendChild(metaAuthor);
+
+    // Add structured data
+    const structuredData = document.createElement("script");
+    structuredData.type = "application/ld+json";
+    structuredData.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vipsee Infotech",
+      "url": "https://www.vipinfo.co.in",
+      "logo": "https://vipinfo.co.in/static/media/vipsee_logo_from_card-removebg-preview.d96d68495b59fa97095f.png",
+      "foundingDate": "2002",
+      "founder": {
+        "@type": "Person",
+        "name": "Vipul Shah"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9321139367",
+        "contactType": "Customer Service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fort, Mumbai",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400001",
+        "addressCountry": "IN"
+      },
+      "description":
+        "Vipsee Infotech is a trusted provider of IT, networking, Surveillance solutions and Cybersecurity with over 20 years of experience.",
+      "sameAs": [
+        "https://www.instagram.com/vipseeinfotech",
+        "https://www.linkedin.com/company/vipsee-infotech",
+        "https://linktr.ee/vipsee"
+      ]
+    });
+    document.head.appendChild(structuredData);
+
+    return () => {
+      // Cleanup: Remove meta tags and structured data
+      document.head.removeChild(metaDescription);
+      document.head.removeChild(metaKeywords);
+      document.head.removeChild(metaAuthor);
+      document.head.removeChild(structuredData);
+    };
   }, []);
-  
+
   return (
     <>
       <div>
