@@ -88,6 +88,17 @@ const CameraProducts = () => {
           <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">
             Uniview Products
           </h1>
+          <div className="text-center mb-8">
+      <a
+        href="https://wa.me/c/919321139367"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-6 py-3 bg-green-500 text-white font-bold text-lg rounded-full shadow-md hover:bg-green-600 transition duration-300"
+        aria-label="View our Product Catalogue"
+      >
+        View Our WhatsApp Catalogue
+      </a>
+    </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
             {products.map((product, index) => (
               <Link
