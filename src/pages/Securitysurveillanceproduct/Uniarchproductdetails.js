@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import NavBar from '../../components/Navbar/NavBar';
 import Footer from '../../components/Footer';
+import { FaWhatsapp } from 'react-icons/fa';
 
 import uniarchindoorCameraimage from "../../images/product images/camera product images/uniarch indoor camera.png";
 import uniarchoutdoorCameraimage from "../../images/product images/camera product images/uniarch outdoor camera.png";
@@ -111,8 +112,8 @@ const UniarchCameraProducts = () => {
                 <div className="container mx-auto px-10">
                     <h1 className="text-3xl font-bold text-blue-900 text-center">Uniarch Camera Products</h1>
                     
-                    {/* Add Dropdown for PDFs */}
-                    <div className="text-center mt-8 relative">
+                    {/* Add Dropdown for PDFs and WhatsApp Button */}
+                    <div className="text-center mt-8 relative flex justify-center space-x-6">
                         <button
                             onClick={() => setShowDropdown(!showDropdown)}
                             className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-green-500 transition duration-300"
@@ -120,7 +121,7 @@ const UniarchCameraProducts = () => {
                             View PDFs
                         </button>
                         {showDropdown && (
-                            <div className="absolute bg-white shadow-lg rounded-lg mt-2 w-80 mx-auto left-0 right-0 z-10">
+                            <div className="absolute bg-white shadow-lg rounded-lg mt-2 w-80 z-10">
                                 <ul className="text-left">
                                     {pdfOptions.map((pdf, index) => (
                                         <li
@@ -134,6 +135,15 @@ const UniarchCameraProducts = () => {
                                 </ul>
                             </div>
                         )}
+                        <a
+                            href="https://wa.me/c/919321139367"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-green-500 text-white px-6 py-3 rounded-lg shadow flex items-center space-x-2 hover:bg-green-600 transition duration-300"
+                        >
+                            <FaWhatsapp size={20} />
+                            <span>Product Catalogue</span>
+                        </a>
                     </div>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-8">

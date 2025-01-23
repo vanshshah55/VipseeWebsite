@@ -5,11 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import sonicwallSDWANimg from "../images/website images/sonicwall secure SDWAN.webp";
 import UNVdomeimg from "../images/website images/UNVdomeimg.png";
 import unvnvrimg from "../images/website images/unvnvrimg.png";
-import unvptzimg from "../images/website images/unvptzimg.png";
+import unvptzimg from "../images/website images/unvPTZcameras2.png";
 import VideoconfA30 from "../images/product images/camera product images/VideoconfA30.png";
 import unvptzimg2 from "../images/website images/unvptzimg2.png";
 import asustornasimg from "../images/website images/asustornasimage.webp";
 import uniarchindoorcamera from "../images/product images/camera product images/uniarch indoor camera.png";
+
 import { HashLink } from "react-router-hash-link";
 
 const Intro = () => {

@@ -188,7 +188,7 @@ const Clients = () => {
               />
             </div>
             <span className="mt-4 text-blue-900 text-lg font-semibold">
-              Authorised Partner
+              Authorised Distributor
             </span>
           </div>
         </section>

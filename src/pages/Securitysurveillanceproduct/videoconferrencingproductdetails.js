@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer";
-
+import { FaWhatsapp } from 'react-icons/fa';
 import VideoconA20image from "../../images/product images/camera product images/VideoconfA20.png";
 import VideoconA30image from "../../images/product images/camera product images/VideoconfA30.png";
 
@@ -124,30 +124,38 @@ const VCproducts = () => {
           </h1>
 
           {/* Add Dropdown for PDFs */}
-          <div className="text-center mt-8 relative">
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-green-500 transition duration-300"
-            >
-              View PDFs
-            </button>
-            {showDropdown && (
-              <div className="absolute bg-white shadow-lg rounded-lg mt-2 w-72 mx-auto left-0 right-0 z-10">
-                <ul className="text-left">
-                  {pdfOptions.map((pdf, index) => (
-                    <li
-                      key={index}
-                      className="px-4 py-2 hover:bg-blue-100 cursor-pointer text-gray-700"
-                      onClick={() => handlePdfSelect(pdf.url)}
-                    >
-                      {pdf.label}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
+          <div className="text-center mt-8 relative flex justify-center space-x-6">
+                                  <button
+                                      onClick={() => setShowDropdown(!showDropdown)}
+                                      className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-green-500 transition duration-300"
+                                  >
+                                      View PDFs
+                                  </button>
+                                  {showDropdown && (
+                                      <div className="absolute bg-white shadow-lg rounded-lg mt-2 w-80 z-10">
+                                          <ul className="text-left">
+                                              {pdfOptions.map((pdf, index) => (
+                                                  <li
+                                                      key={index}
+                                                      className="px-4 py-2 hover:bg-blue-100 cursor-pointer text-gray-700"
+                                                      onClick={() => handlePdfSelect(pdf.url)}
+                                                  >
+                                                      {pdf.label}
+                                                  </li>
+                                              ))}
+                                          </ul>
+                                      </div>
+                                  )}
+                                  <a
+                                      href="https://wa.me/c/919321139367"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="bg-green-500 text-white px-6 py-3 rounded-lg shadow flex items-center space-x-2 hover:bg-green-600 transition duration-300"
+                                  >
+                                      <FaWhatsapp size={20} />
+                                      <span>Product Catalogue</span>
+                                  </a>
+                              </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-8">
             {products.map((product, index) => (
               <div
