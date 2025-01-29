@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 
 .not-found-container {
     height: 100vh;
@@ -25,9 +25,9 @@
     animation: glitch 1s infinite linear alternate;
 }
 @keyframes glitch {
-    0% { text-shadow: 2px 2px #FFA500, -2px -2px #FF00FF; }
-    50% { text-shadow: -2px -2px #FFA500, 2px 2px #FF00FF; }
-    100% { text-shadow: 2px -2px #FFA500, -2px 2px #FF00FF; }
+    0% { text-shadow: 2px 2px #00D4FF, -2px -2px #FFA500; }
+    50% { text-shadow: -2px -2px #00D4FF, 2px 2px #FFA500; }
+    100% { text-shadow: 2px -2px #00D4FF, -2px 2px #FFA500; }
 }
 
 /* Title & Description */
@@ -58,7 +58,7 @@
     transition: all 0.3s ease-in-out;
 }
 .neon {
-    background: linear-gradient(135deg, #FFA500, #FF00FF);
+    background: linear-gradient(135deg, #00D4FF, #3546e0);
     color: #fff;
     box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
 }
