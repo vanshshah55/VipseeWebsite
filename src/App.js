@@ -14,6 +14,9 @@ import ContactUs from './pages/ContactUs';
 //import partners from './components/Clients'
 import Clients from '../src/components/Clients'
 
+
+import NotFound from "./pages/NotFound";
+
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -122,6 +125,8 @@ function App() {
             <Route path="/Video-Conferrencing-products-details" element={<VCproduct />} />
 
             <Route path="/Privacy-Policy" element={<Privacypolicy/>}/>
+            
+            <Route path="*" element={<NotFound />} />
 
 
 {/* 
