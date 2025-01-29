@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.not-found-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #011F3F, #02457A);
+    text-align: center;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🔥 Glitching 404 Effect */
+.glitch {
+    font-size: 140px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    animation: glitch 1s infinite linear alternate;
+}
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #FFA500, -2px -2px #FF00FF; }
+    50% { text-shadow: -2px -2px #FFA500, 2px 2px #FF00FF; }
+    100% { text-shadow: 2px -2px #FFA500, -2px 2px #FF00FF; }
+}
+
+/* Title & Description */
+.title {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #FFA500;
+}
+.description {
+    font-size: 18px;
+    max-width: 600px;
+    opacity: 0.8;
+}
+
+/* 🚀 Futuristic Neon Buttons */
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.neon {
+    background: linear-gradient(135deg, #FFA500, #FF00FF);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+}
+.neon:hover {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.9);
+}
+.secondary {
+    background: transparent;
+    border: 2px solid #FFA500;
+    color: #FFA500;
+}
+.secondary:hover {
+    background: #FFA500;
+    color: #011F3F;
+}
+
+/* 🌌 Background Floating Particles */
+.not-found-container::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.3), transparent);
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    filter: blur(80px);
+    animation: moveGlow 8s infinite alternate;
+}
+@keyframes moveGlow {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(100px); }
+}
