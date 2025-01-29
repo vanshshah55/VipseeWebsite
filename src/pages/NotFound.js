@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NotFound.css"; // Import CSS for futuristic effects
+import { HashLink } from 'react-router-hash-link';
 
 const NotFound = () => {
   return (
