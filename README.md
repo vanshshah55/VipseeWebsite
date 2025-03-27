@@ -1,1 +1,0 @@
-https://vipinfo.co.in/

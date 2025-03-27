@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 // Images
 import sonicwallImage from '../../images/product images/sonicwall.jpg';
 import sophosImage from '../../images/product images/sophosfirewall.png';
+import fortinetImage from '../../images/product images/fortinet firewall.png';
 
 const FirewallDetails = () => {
     const firewallProducts = [
@@ -21,6 +22,20 @@ const FirewallDetails = () => {
             features: ['Network visibility', 'Advanced VPN options', 'SSL VPN support', 'Web filtering'],
             imageUrl: sophosImage,
             alt: 'Sophos XG Firewall product image ',
+        },
+        {
+            name: 'Fortinet Firewall',
+            description: 'Fortinet FortiGate next-generation firewalls deliver AI-powered security and unmatched performance, protecting organizations from advanced cyber threats.',
+            features: [
+                'FortiGuard AI-powered security services',
+                'Integrated Zero Trust Network Access (ZTNA)',
+                'Hardware-accelerated NGFW performance',
+                'Automated threat protection',
+                'SD-WAN and SASE integration',
+                'Single pane management with FortiManager'
+            ],
+            imageUrl: fortinetImage,
+            alt: 'Fortinet FortiGate Firewall product image'
         },
     ];
 
@@ -42,19 +57,33 @@ const FirewallDetails = () => {
                 imageUrl: sophosImage,
                 alt: 'Sophos XG Firewall product image with key features',
             },
+            {
+                name: 'Fortinet Firewall',
+                description: 'Fortinet FortiGate next-generation firewalls deliver AI-powered security and unmatched performance, protecting organizations from advanced cyber threats.',
+                features: [
+                    'FortiGuard AI-powered security services',
+                    'Integrated Zero Trust Network Access (ZTNA)',
+                    'Hardware-accelerated NGFW performance',
+                    'Automated threat protection',
+                    'SD-WAN and SASE integration',
+                    'Single pane management with FortiManager'
+                ],
+                imageUrl: fortinetImage,
+                alt: 'Fortinet FortiGate Firewall product image'
+            }
         ];
     
         // SEO metadata
         document.title = 'Firewall Solutions | Vipsee Infotech';
         document.querySelector('meta[name="description"]').setAttribute(
             'content',
-            'Explore advanced firewall solutions like SonicWall and Sophos XG Firewall, providing secure, intelligent, and responsive threat protection for businesses.'
+            'Explore advanced firewall solutions like SonicWall, Sophos XG Firewall, Fortinet FortiGate, providing secure, intelligent, and responsive threat protection for businesses.'
         );
     
         // Meta keywords
         const metaKeywords = document.createElement('meta');
         metaKeywords.name = 'keywords';
-        metaKeywords.content = 'firewall solutions, SonicWall Firewall, Sophos XG Firewall, Firewall Maintenance, firewall Setup, Firewall configuration, firewall AMC, network security, business threat protection, advanced firewall, Vipsee Infotech, ';
+        metaKeywords.content = 'firewall solutions, SonicWall Firewall, Sophos XG Firewall, Fortinet FortiGate Firewall, Firewall Maintenance, firewall Setup, Firewall configuration, firewall AMC, network security, business threat protection, advanced firewall, Vipsee Infotech, ';
         document.head.appendChild(metaKeywords);
     
         // Structured data
@@ -62,7 +91,7 @@ const FirewallDetails = () => {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Firewall Solutions",
-            "description": "Explore advanced firewall solutions from SonicWall and Sophos XG Firewall tailored for businesses to enhance network security.",
+            "description": "Explore advanced firewall solutions from SonicWall, Sophos XG Firewall, Fortinet FortiGate Firewall tailored for businesses to enhance network security.",
             "brand": firewallProducts.map(product => ({
                 "@type": "Brand",
                 "name": product.name,

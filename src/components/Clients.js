@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useEffect, useMemo } from "react";
 import Cisco from "../images/clients/Cisco_Logo-removebg-preview.png";
 import Cambium from "../images/clients/Cambium Network - Logo.png";
@@ -17,55 +13,15 @@ import asustor from "../images/clients/asustorlogo.png";
 import bitdefender from "../images/clients/bitdefenderlogo.png";
 import eset from "../images/clients/esetlogo.png";
 import sqrite from "../images/clients/sqritelogo-removebg-preview.png";
+import fortinet from "../images/clients/Fortinet_Logo.png";
 
 const exclusivePartnerLogo = uniview;
 
-const Clients = () => {
-  // Optimize client logos initialization
-  const clientLogosRow1 = useMemo(() => [
-    uniview,
-  hikvision,
-  Sonicwall,
-  sophos,
-  Cambium,
-  Ruijie,
-  Cisco,
-  netgear,
-  Tplink,
-  qsan,
-  asustor,
-  bitdefender,
-  sqrite,
-  eset,
+const baseLogos = [
   uniview,
   hikvision,
   Sonicwall,
-  sophos,
-  Cambium,
-  Ruijie,
-  Cisco,
-  netgear,
-  Tplink,
-  qsan,
-  asustor,
-  bitdefender,
-  sqrite,
-  eset,uniview,
-  hikvision,
-  Sonicwall,
-  sophos,
-  Cambium,
-  Ruijie,
-  Cisco,
-  netgear,
-  Tplink,
-  qsan,
-  asustor,
-  bitdefender,
-  sqrite,
-  eset,uniview,
-  hikvision,
-  Sonicwall,
+  fortinet,
   sophos,
   Cambium,
   Ruijie,
@@ -77,8 +33,13 @@ const Clients = () => {
   bitdefender,
   sqrite,
   eset,
-  
-  ], []);
+];
+
+const Clients = () => {
+  // Create repeated logos array using Array.from
+  const clientLogosRow1 = useMemo(() => {
+    return Array.from({ length: 100 }, () => baseLogos).flat();
+  }, []);
 
   // Update SEO metadata and structured data
   useEffect(() => {
@@ -96,7 +57,7 @@ const Clients = () => {
       const newMetaDescription = document.createElement("meta");
       newMetaDescription.name = "description";
       newMetaDescription.content =
-      "Explore our trusted partners in Data,networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more.";
+      "Explore our trusted partners in Data, networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more.";
       document.head.appendChild(newMetaDescription);
     }
 
@@ -105,13 +66,13 @@ const Clients = () => {
     if (metaKeywords) {
       metaKeywords.setAttribute(
         "content",
-        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall,sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset"
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset"
       );
     } else {
       const newMetaKeywords = document.createElement("meta");
       newMetaKeywords.name = "keywords";
       newMetaKeywords.content =
-        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall,sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset";
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset";
       document.head.appendChild(newMetaKeywords);
     }
 
