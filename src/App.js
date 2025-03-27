@@ -73,6 +73,13 @@ function App() {
     window.addEventListener('load', () => {
       aos_init();
     });
+
+    // Add scroll padding to account for fixed header
+    document.documentElement.style.scrollPaddingTop = '100px';
+    
+    return () => {
+      document.documentElement.style.scrollPaddingTop = '0';
+    };
   }, []);
 
   useDocTitle("Vipsee Infotech");
