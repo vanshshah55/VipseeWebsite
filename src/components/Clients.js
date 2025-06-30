@@ -46,14 +46,14 @@ const Clients = () => {
   // Update SEO metadata and structured data
   useEffect(() => {
     // Update the page title
-    document.title = "Our Trusted Partners - Networking and Surveillance Solutions";
+    document.title = "Vipsee Infotech - Trusted Partners ";
 
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore our trusted partners in Data,networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more."
+        "Explore our trusted partners in Data, networking and surveillance solutions, including Sonicwall, Uniview, Hikvision, and more."
       );
     } else {
       const newMetaDescription = document.createElement("meta");
@@ -68,13 +68,13 @@ const Clients = () => {
     if (metaKeywords) {
       metaKeywords.setAttribute(
         "content",
-        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset"
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset, Verbatim"
       );
     } else {
       const newMetaKeywords = document.createElement("meta");
       newMetaKeywords.name = "keywords";
       newMetaKeywords.content =
-        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset";
+        "Wifi Solutions, Data Solutions, networking solutions, surveillance solutions,Connectivity solutions, Cisco, Uniview, Hikvision, Sonicwall, trusted partners, uniview,hikvision,Sonicwall, Fortinet, sophos,Cambium,Ruijie,Cisco,netgear,Tplink,qsan,asustor, bitdefender,sqrite,eset, Verbatim";
       document.head.appendChild(newMetaKeywords);
     }
 
