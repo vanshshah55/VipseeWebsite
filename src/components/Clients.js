@@ -14,12 +14,14 @@ import bitdefender from "../images/clients/bitdefenderlogo.png";
 import eset from "../images/clients/esetlogo.png";
 import sqrite from "../images/clients/sqritelogo-removebg-preview.png";
 import fortinet from "../images/clients/Fortinet_Logo.png";
+import verbatim from "../images/clients/Verbatim_logo.png";
 
 const exclusivePartnerLogo = uniview;
 
 const baseLogos = [
   uniview,
   hikvision,
+  verbatim,
   Sonicwall,
   fortinet,
   sophos,
